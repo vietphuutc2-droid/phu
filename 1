@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tạo Link Shopee</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(180deg, #ee4d2d, #ff7337);
+  color: #333;
+}
+
+/* Header */
+.header {
+  padding: 30px 20px 20px;
+  text-align: center;
+  color: white;
+}
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+.header p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Card */
+.card {
+  background: white;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Input */
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  background: linear-gradient(90deg, #ee4d2d, #ff7337);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* Guide */
+.guide li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Coupon */
+.coupon {
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: white;
+  border-radius: 14px;
+  padding: 15px;
+}
+.coupon h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.coupon p {
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+.footer button {
+  background: white;
+  color: #ee4d2d;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🔗 Tạo Link Shopee</h1>
+  <p>Dán link để nhận mã giảm giá ngay</p>
+</div>
+
+<div class="card">
+  <div class="input-group">
+    <input type="text" id="link" placeholder="Dán link Shopee vào đây...">
+  </div>
+  <button class="btn" onclick="createLink()">TẠO LINK NGAY</button>
+</div>
+
+<div class="card">
+  <h3>📌 Hướng dẫn</h3>
+  <ul class="guide">
+    <li>Dán link sản phẩm Shopee</li>
+    <li>Nhấn “Tạo Link”</li>
+    <li>Mở link để nhận mã giảm giá</li>
+  </ul>
+</div>
+
+<div class="card coupon">
+  <h3>🎁 Giảm 25% - tối đa 200K</h3>
+  <p>Đơn tối thiểu 50K</p>
+  <p>⏳ Sắp hết hạn</p>
+</div>
+
+<div class="footer">
+  <button onclick="goShopee()">Đi đến Shopee</button>
+</div>
+
+<script>
+function createLink() {
+  let link = document.getElementById("link").value;
+  if (!link) {
+    alert("Vui lòng nhập link Shopee!");
+    return;
+  }
+  let affLink = link + "?aff_id=YOUR_ID";
+  window.location.href = affLink;
+}
+
+function goShopee() {
+  window.location.href = "https://shopee.vn";
+}
+</script>
+
+</body>
+</html>
