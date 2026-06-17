@@ -141,8 +141,10 @@ function createLink() {
     alert("Vui lòng nhập link Shopee!");
     return;
   }
-  let affLink = link + "?aff_id=55tt5s2501e0&utm_campaign=-&utm_content=-&utm_medium=affiliates&utm_source=an_17347070255&utm_term=f3b1sopvr5jm";
-  window.location.href = affLink;
+  let separator = link.includes("?") ? "&" : "?";
+let affLink = link + separator + "aff_id=55tt5s2501e0&utm_campaign=&utm_content=&utm_medium=affiliates&utm_source=an_17347070255&utm_term=f3b1sopvr5jm";
+window.location.href = affLink;
+
 }
 
 function goShopee() {
